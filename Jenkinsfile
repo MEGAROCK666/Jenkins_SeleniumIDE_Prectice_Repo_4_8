@@ -32,7 +32,7 @@ pipeline {
         stage("Run tests") {
             steps {
                 // Run tests using the solution file
-                bat 'dotnet test SeleniumIde.sln --longer "trx;LogFileName=TestResult.trx"'
+                bat 'dotnet test SeleniumIde.sln --logger "trx;LogFileName=TestResult.trx"'
 
             }
         }

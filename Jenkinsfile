@@ -37,4 +37,10 @@ pipeline {
             }
         }
     }
+    post {
+        aways {
+            archiveArtifacts artifacts: '**/TestResults/*trx', allowEmptyArchive: true
+            junit '**/TestResults/*.trx'
+        }
+    }
 }
